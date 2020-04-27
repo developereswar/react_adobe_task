@@ -1,0 +1,37 @@
+
+@font-face {
+    font-family: 'Verdana';
+    src: url('../fonts/Verdana.woff2') format('woff2'),
+        url('../fonts/Verdana.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.App {
+    font-family: Verdana;
+    text-align: center;
+    overflow: hidden;
+    .navbar-brand a{
+        color: #fff;
+    }
+    .countList{
+        position: absolute;
+        background: red;
+        color: #fff;
+        padding: 0px 6px;
+        border-radius: 4rem;
+        font-size: 12px;
+        font-weight: 600;
+        bottom: 10px;
+        right: 10px;
+    }
+
+    .btnAddCart{
+        border-radius: 2rem;
+        font-family: Verdana ;
+        font-size: 15px;
+        font-weight: 600;
+    }
+
+   
+  }
