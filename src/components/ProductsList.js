@@ -15,16 +15,14 @@ import { faRupeeSign } from "@fortawesome/free-solid-svg-icons";
 import { AppContext } from "../context/api.context";
 
 const ProductsList = () => {
-  const {ProductList, getList} = useContext(AppContext);
+  const {ProductList, getList, filterList} = useContext(AppContext);
 
   const addedItem = (e) => {
     getList(e)
   };
 
-  return (
-    <>
-      {ProductList &&
-        ProductList.map((val, key) => {
+  const listPorducts =(data)=>{
+    return(data && data.map((val, key) => {
           return (
             <Col sm="3" className="mb-3 mt-3" key={key}>
               <Card>
@@ -70,7 +68,12 @@ const ProductsList = () => {
               </Card>
             </Col>
           );
-        })}
+        })
+    )
+  }
+  return (
+    <>
+     { listPorducts(filterList || ProductList)}
     </>
   );
 };

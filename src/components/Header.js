@@ -22,9 +22,11 @@ import { Route } from "react-router-dom";
 const Header = () => {
   const {bagList} = useContext(AppContext)
   const history = useHistory();
+
+ 
   return (
     <Fragment>
- 
+  
     <Navbar color="primary" dark expand="md">
       <NavbarBrand >
         <Link to="/" > <FontAwesomeIcon icon={faStar} /> </Link>
@@ -34,7 +36,7 @@ const Header = () => {
         <Nav navbar>
           <NavItem>
             <NavLink>
-              <FontAwesomeIcon icon={faShoppingCart} onClick={()=>{history.push('/cartlist')}} />
+              <FontAwesomeIcon icon={faShoppingCart} onClick={()=>{history.push('/cartlist')} } />
               {(bagList.length !== 0) && <span className="countList" >{bagList.length}</span> } 
             </NavLink>
           </NavItem>

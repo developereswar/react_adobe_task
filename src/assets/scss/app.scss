@@ -33,5 +33,12 @@
         font-weight: 600;
     }
 
+    .carList{
+        display: flex;
+        align-items: flex-start;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+    }
+
    
   }
