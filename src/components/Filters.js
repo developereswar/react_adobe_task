@@ -22,11 +22,11 @@ export default class Filters extends React.Component {
     let filterProducts = ProductList &&
       ProductList.filter((val) => {
         
-        if (val.price.actual <=  e.max || val.price.actual <= e.min) {
-          console.log(val.price.actual)
+        if (val.price.actual <=  e.max && val.price.actual > e.min) {
+
           return val;
         }
-        
+       
       });
       
       this.setState({filterProducts});
