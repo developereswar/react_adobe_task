@@ -18,6 +18,7 @@ const ProductsList = () => {
   const {ProductList, getList, filterList} = useContext(AppContext);
 
   const addedItem = (e) => {
+    e.count =1;
     getList(e)
   };
 

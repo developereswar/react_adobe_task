@@ -18,7 +18,7 @@ const ApiStore = ({ children }) => {
       console.log(bagList)
   }
   return (
-    <AppProvider value={{ProductList, getList, bagList, setFilterLists, filterList}}>
+    <AppProvider value={{ProductList, getList, bagList,setBagList, setFilterLists, filterList}}>
       {children}
     </AppProvider>
   );

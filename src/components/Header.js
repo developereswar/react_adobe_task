@@ -16,8 +16,7 @@ import {
 import { Link } from "react-router-dom";
 import { useHistory, withRouter} from "react-router";
 import { AppContext } from "../context/api.context";
-import cartList from "./CartList";
-import { Route } from "react-router-dom";
+
 
 const Header = () => {
   const {bagList} = useContext(AppContext)
@@ -37,7 +36,7 @@ const Header = () => {
           <NavItem>
             <NavLink>
               <FontAwesomeIcon icon={faShoppingCart} onClick={()=>{history.push('/cartlist')} } />
-              {(bagList.length !== 0) && <span className="countList" >{bagList.length}</span> } 
+              {(bagList.length !== 0) && <span className="countList" >{bagList &&bagList.length}</span> } 
             </NavLink>
           </NavItem>
         </Nav>
